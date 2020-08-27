@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+        .container>div {
+            padding: 1em;
+            background-color: grey;
+        }
+
+        .container> :nth-child(even) {
+            background-color: lavender;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 50vh 50vh);
+            grid-gap: 1em;
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        #j {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="j">
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+        </div>
+        <div>Lorem ipsum dolor sit amet. 2</div>
+        <div>Lorem ipsum dolor sit amet. 3</div>
+        <div>Lorem ipsum dolor sit amet. 4</div>
+        <div>Lorem ipsum dolor sit amet. 5</div>
+    </div>
+</body>
+
+</html>

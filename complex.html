@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 1em;
+            grid-gap: 1em;
+            grid-auto-rows: minmax(200px, auto);
+        }
+
+        .container>div {
+            padding: 1em;
+            background-color: grey;
+        }
+
+        .container> :nth-child(even) {
+            background-color: lavender;
+        }
+
+        #box-1 {}
+
+        #box-2 {
+            grid-column: 2/4;
+        }
+
+        #box-3 {
+            grid-column: 3/4;
+            grid-row: 2/4;
+        }
+
+        #box-4 {
+            grid-column: 1/3
+        }
+
+        #box-5 {}
+
+        #box-6 {}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="box-1">Lorem1</div>
+        <div id="box-2">Lorem2</div>
+        <div id="box-3">Lorem3</div>
+        <div id="box-4">Lorem4</div>
+        <div id="box-5">Lorem 5</div>
+        <div id="box-6">Lorem6 </div>
+
+    </div>
+</body>
+
+</html>
